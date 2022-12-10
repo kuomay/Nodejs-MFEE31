@@ -19,6 +19,13 @@ let p = new Promise((resolve, reject) => {
   // 初始狀態會是 pending
   // 當非同步工作完成的時候 -> 呼叫 resolve -> promise 的狀態會變成 fulfilled
   // 當非同步工作失敗的時候 -> 呼叫 reject -> promise 的狀態會變成 rejected
+
+  //------------------
+// console.log(p); // Promise 物件 <pending>
+
+// then 是接 resolve
+// catch 是接 reject
+
   p.then((data) => {
     console.log('拿回資料', data);
   }).catch((error) => {
